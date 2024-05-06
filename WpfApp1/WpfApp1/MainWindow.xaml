@@ -9,25 +9,52 @@
     <Window.Resources>
     </Window.Resources>
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="AAAAA">
-                <MenuItem Header="AAA11111"/>
-                <MenuItem Header="AAA22222222222222">
-                    <MenuItem Header="AAA222ZZZZZZZZ"/>
-                    <MenuItem Header="AAA222YYYYY"/>
-                    <MenuItem Header="AAA222XXX"/>
+        <Border DockPanel.Dock="Top" BorderThickness="2" BorderBrush="Yellow">
+            <Menu>
+                <MenuItem Header="AAAAA">
+                    <MenuItem Header="AAA11111"/>
+                    <MenuItem Header="AAA22222222222222">
+                        <MenuItem Header="AAA222ZZZZZZZZ"/>
+                        <MenuItem Header="AAA222YYYYY"/>
+                        <MenuItem Header="AAA222XXX"/>
+                    </MenuItem>
+                    <MenuItem Header="AAA333"/>
                 </MenuItem>
-                <MenuItem Header="AAA333"/>
-            </MenuItem>
-            <MenuItem Header="BBBBBBBB">
-                <MenuItem Header="BBB11111"/>
-                <MenuItem Header="BBB22222222222222"/>
-                <MenuItem Header="BBBBB333"/>
-            </MenuItem>
-        </Menu>
+                <MenuItem Header="BBBBBBBB">
+                    <MenuItem Header="BBB11111"/>
+                    <MenuItem Header="BBB22222222222222"/>
+                    <MenuItem Header="BBBBB333"/>
+                </MenuItem>
+            </Menu>
+        </Border>
         
+        <Border DockPanel.Dock="Left" BorderThickness="2" BorderBrush="GreenYellow">
+            <Menu>
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAAAA">
+                    <MenuItem Header="AAA11111"/>
+                    <MenuItem Header="AAA22222222222222">
+                        <MenuItem Header="AAA222ZZZZZZZZ"/>
+                        <MenuItem Header="AAA222YYYYY"/>
+                        <MenuItem Header="AAA222XXX"/>
+                    </MenuItem>
+                    <MenuItem Header="AAA333"/>
+                </MenuItem>
+                <MenuItem Header="BBBBBBBB">
+                    <MenuItem Header="BBB11111"/>
+                    <MenuItem Header="BBB22222222222222"/>
+                    <MenuItem Header="BBBBB333"/>
+                </MenuItem>
+            </Menu>
+        </Border>
+
         <Grid DockPanel.Dock="Bottom">
-            
+
         </Grid>
     </DockPanel>
 </Window>
