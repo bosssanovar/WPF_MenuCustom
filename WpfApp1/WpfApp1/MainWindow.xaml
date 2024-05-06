@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="500">
     <Window.Resources>
     </Window.Resources>
     <DockPanel>
-        <Border DockPanel.Dock="Top" BorderThickness="2" BorderBrush="Yellow">
+        <Border DockPanel.Dock="Top" BorderThickness="2" BorderBrush="Orange">
             <Menu>
                 <MenuItem Header="AAAAA">
                     <MenuItem Header="AAA11111"/>
@@ -28,8 +28,27 @@
             </Menu>
         </Border>
         
+        <Border DockPanel.Dock="Top" BorderThickness="2" BorderBrush="Yellow">
+            <Menu Style="{DynamicResource MenuDarkStyle}">
+                <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAAAA">
+                    <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAA11111"/>
+                    <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAA22222222222222">
+                        <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAA222ZZZZZZZZ"/>
+                        <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAA222YYYYY"/>
+                        <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAA222XXX"/>
+                    </MenuItem>
+                    <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="AAA333"/>
+                </MenuItem>
+                <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="BBBBBBBB">
+                    <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="BBB11111"/>
+                    <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="BBB22222222222222"/>
+                    <MenuItem Style="{DynamicResource MenuItemDarkStyle}" Header="BBBBB333"/>
+                </MenuItem>
+            </Menu>
+        </Border>
+        
         <Border DockPanel.Dock="Left" BorderThickness="2" BorderBrush="GreenYellow">
-            <Menu>
+            <Menu Style="{DynamicResource MenuDarkStyle}">
                 <Menu.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>
@@ -37,24 +56,37 @@
                 </Menu.ItemsPanel>
 
                 <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAAAA">
-                    <MenuItem Header="AAA11111"/>
-                    <MenuItem Header="AAA22222222222222">
-                        <MenuItem Header="AAA222ZZZZZZZZ"/>
-                        <MenuItem Header="AAA222YYYYY"/>
-                        <MenuItem Header="AAA222XXX"/>
+                    <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAA11111"/>
+                    <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAA22222222222222">
+                        <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAA222ZZZZZZZZ"/>
+                        <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAA222YYYYY"/>
+                        <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAA222XXX"/>
                     </MenuItem>
-                    <MenuItem Header="AAA333"/>
+                    <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="AAA333"/>
                 </MenuItem>
                 <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="BBBBBBBB">
-                    <MenuItem Header="BBB11111"/>
-                    <MenuItem Header="BBB22222222222222"/>
-                    <MenuItem Header="BBBBB333"/>
+                    <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="BBB11111"/>
+                    <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="BBB22222222222222"/>
+                    <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="BBBBB333"/>
                 </MenuItem>
             </Menu>
         </Border>
 
-        <Grid DockPanel.Dock="Bottom">
-
+        <Grid DockPanel.Dock="Bottom" Background="Black" TextElement.Foreground="White">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5">
+                    <Border BorderThickness="2" BorderBrush="Orange" Width="30"/>
+                    <TextBlock TextWrapping="Wrap" Text="標準のMenuコントロールそのまま"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5">
+                    <Border BorderThickness="2" BorderBrush="Yellow" Width="30"/>
+                    <TextBlock TextWrapping="Wrap" Text="標準のMenuコントロールを黒基調にしたもの"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5">
+                    <Border BorderThickness="2" BorderBrush="GreenYellow" Width="30"/>
+                    <TextBlock Width="300" TextWrapping="Wrap" Text="標準のMenuコントロールを黒基調にし、サイドメニューとして利用できるようにテンプレートを一部変更したもの"/>
+                </StackPanel>
+            </StackPanel>
         </Grid>
     </DockPanel>
 </Window>
