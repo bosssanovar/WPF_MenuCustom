@@ -45,7 +45,7 @@
                     </MenuItem>
                     <MenuItem Header="AAA333"/>
                 </MenuItem>
-                <MenuItem Header="BBBBBBBB">
+                <MenuItem Style="{DynamicResource MenuItemPopupRightStyle}" Header="BBBBBBBB">
                     <MenuItem Header="BBB11111"/>
                     <MenuItem Header="BBB22222222222222"/>
                     <MenuItem Header="BBBBB333"/>
